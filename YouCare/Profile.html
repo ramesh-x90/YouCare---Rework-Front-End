@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouCare | Profile</title>
+    <link
+      rel="shortcut icon"
+      href="https://healthcarewebappsltcpro.herokuapp.com/assets/us1.jpeg"
+      type="image/x-icon"
+    />
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <include src="Pages/Profile/NavBarTop/NavBarTop.html"></include>
+
+    <div class="">
+      <div class="NavSideBarcontainer bg-dark">
+        <include src="Pages/Profile/NavBarSide/sideBar.html"></include>
+      </div>
+      <div class="contentModule"></div>
+    </div>
+  </body>
+  <script src="js/SmoothScroling.js"></script>
+  <script src="js/HtmlInjector.js"></script>
+
+  <script src="Pages/Profile/NavBarSide/sideNav.js"></script>
+  <script src="js\APIutility\ApiCaller.js"></script>
+  <script src="js\Loading\Loading.js"></script>
+  <script src="js\ToastMsg\ToastMsg.js"></script>
+  <script src="js\profile\profile.js"></script>
+
+  <style>
+    .contentModule {
+      margin-left: 20px;
+      height: 1000vh;
+      background-color: rgb(56, 60, 71);
+      /* border: 2px solid white; */
+      transition: margin-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  </style>
+</html>

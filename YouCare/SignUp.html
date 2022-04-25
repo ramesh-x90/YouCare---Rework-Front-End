@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouCare | Sign Up</title>
+    <link
+      rel="shortcut icon"
+      href="https://healthcarewebappsltcpro.herokuapp.com/assets/us1.jpeg"
+      type="image/x-icon"
+    />
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- 
+
+
+
+
+
+
+        
+    -->
+
+    <div class="container py-5 m-auto" id="SignUpFormMainDiv">
+      <div class="p-5 bg-white text-dark slide-down" id="formContainer">
+        <form
+          action="#"
+          method="post"
+          id="SignUpForm"
+          onsubmit="return validateForm()"
+        >
+          <div class="mb-3">
+            <!-- 
+
+                Username
+
+        
+            -->
+            <label for="UserName" class="form-label">User Name :</label>
+            <input
+              class="form-control col-lg-8"
+              type="text"
+              name="UserName"
+              id="UserName"
+              placeholder="Example Name"
+              maxlength="20"
+              required
+            />
+          </div>
+          <!-- 
+
+            Email
+
+        
+            -->
+
+          <div class="mb-3">
+            <label for="UserName" class="form-label">Email Address :</label>
+            <input
+              class="form-control"
+              type="email"
+              name="UserEmail"
+              id="UserEmail"
+              placeholder="Example@gmail.com"
+              maxlength="30"
+              required
+            />
+          </div>
+          <!-- 
+
+
+            Address
+        
+        
+          <div class="mb-3">
+            <label for="address" class="form-label">Address :</label>
+            <input
+              class="form-control"
+              type="text"
+              name="address"
+              id="address"
+              placeholder="232/2, Example Road, Sri Lanka"
+            />
+          </div>
+
+              -->
+          <!-- 
+
+            PhoneNo
+
+        
+            -->
+
+          <div class="mb-3">
+            <label for="PhoneNo" class="form-label">Phone Number :</label>
+            <input
+              class="form-control"
+              type="number"
+              name="PhoneNo"
+              id="PhoneNo"
+              placeholder="(+94) 00 0000 000"
+              maxlength="15"
+              required
+            />
+          </div>
+
+          <!-- 
+
+            Select account type
+
+        
+            -->
+
+          <div class="mb-3">
+            <label for="accTye" class="form-label">Select Account Type :</label>
+            <select name="accTye" id="accTye" class="form-select">
+              <option value="patient" class="m-2">Patient</option>
+              <option value="doctor" class="m-2">Doctor</option>
+              <option value="hospital_manager" class="m-2">
+                Hospital Manager
+              </option>
+            </select>
+          </div>
+
+          <!-- 
+
+
+            Doctors and Hospital Manger have to give more information
+
+
+          Doctors
+    
+            -->
+          <div class="moreInfo" id="moreInfo" style="display: block">
+            <div class="mb-3 moreInfo" id="DocMoreInfo" style="display: none">
+              <div class="mb-3">
+                <label for="docSpec" class="form-label">Specification :</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="docSpec"
+                  id="docSpec"
+                  placeholder="Neurologists"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="docSpec" class="form-label">Your licenses :</label>
+                <input
+                  class="form-control"
+                  type="file"
+                  name="doctor_license"
+                  id="doctor_license"
+                  maxlength="3"
+                  accept=".jpg,.pdf"
+                />
+              </div>
+            </div>
+            <!-- 
+
+          Hospital Manger
+             -->
+            <div
+              class="mb-3 moreInfo"
+              id="HospitalManagerMoreInfo"
+              style="display: none"
+            >
+              <div class="mb-3">
+                <label for="HMSpec" class="form-label">Hospital Name :</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="H_name"
+                  id="H_name"
+                  placeholder="Asiri"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="docSpec" class="form-label"
+                  >Organization Email Address :</label
+                >
+                <input
+                  class="form-control"
+                  type="email"
+                  name="H_email"
+                  id="H_email"
+                  placeholder="ExampleOrganization@gmail.com"
+                  maxlength="30"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="docSpec" class="form-label"
+                  >Organization Address :</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="H_Address"
+                  id="H_Address"
+                  placeholder="232/2, ExampleOrganization"
+                  maxlength="30"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 
+
+            Birth Date
+
+        
+            -->
+
+          <div class="mb-3">
+            <label for="Birth_Date" class="form-label">Birth Date :</label>
+            <input
+              class="form-control"
+              type="date"
+              name="Birth_Date"
+              id="Birth_Date"
+              placeholder="(+94) 00 0000 000"
+              required
+            />
+          </div>
+
+          <!-- 
+
+
+
+           -->
+          <div class="mb-3">
+            <label for="Birth_Date" class="form-label">Password :</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="form-control"
+              minlength="8"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="Birth_Date" class="form-label">Repeat Password :</label>
+            <input
+              type="password"
+              name="confirmpassword"
+              id="confirmpassword"
+              placeholder="Repeat Password"
+              class="form-control mb-3"
+              minlength="8"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <!-- 
+
+
+            Buttons
+        
+            -->
+
+          <div class="mb-3 btn d-flex justify-content-between">
+            <div>
+              <input
+                type="submit"
+                value="Submit"
+                class="btn btn-primary border-light"
+              />
+            </div>
+            <div>
+              <input
+                type="reset"
+                value="Reset"
+                class="btn btn-danger border-light"
+              />
+            </div>
+          </div>
+
+          <!-- 
+
+
+
+        
+            -->
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/SignUp/SignUp.js"></script>
+  <script src="js\APIutility\ApiCaller.js"></script>
+  <script src="js\Loading\Loading.js"></script>
+  <script src="js\ToastMsg\ToastMsg.js"></script>
+
+  <style>
+    #formContainer {
+      border-radius: 3%;
+      width: 50vw;
+      margin: auto;
+      min-width: 500px;
+      box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.2),
+        0px 0px 20px rgb(0, 0, 0, 0.5);
+      max-width: 600px;
+    }
+    .slide-down {
+      animation: slide-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    @keyframes slide-down {
+      0% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</html>
